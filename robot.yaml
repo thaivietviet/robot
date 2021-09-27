@@ -1,0 +1,46 @@
+name: rpa-form-challenge
+version: 1.0.0
+
+tasks:
+  Challenge:
+    command:
+      - python
+      - -m
+      - robot
+      - --report
+      - NONE
+      - -d
+      - output
+      - --logtitle
+      - Task log
+      - tasks.robot
+
+arguments:
+  input:
+    - name: siteUrl
+      type: String
+      required: True
+      defaultValue:
+      description: Site Address
+    - name: excelFileUrl
+      type: String
+      required: True
+      defaultValue:
+      description: Excel File Address Url
+  output:
+    - name: result
+      type: Int
+      required: False
+      defaultValue:
+      description: Number of processed items
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+ignoreFiles:
+  - .gitignore
+PATH:
+  - .
+PYTHONPATH:
+  - keywords
+  - libraries
+  - variables
