@@ -17,7 +17,7 @@ tasks:
 
 arguments:
   input:
-    - name: siteUrl
+    - name: v_1.0.0
       type: String
       required: True
       defaultValue:
